@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello React!</title>
   </head>
   <body>
@@ -13,23 +10,25 @@
       src="https://unpkg.com/react@18/umd/react.development.js"
       crossorigin
     ></script>
+    <!--Core React Library - Works with Components,state,all react stuff-->
     <script
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
       crossorigin
     ></script>
+    <!--Rendering layer - Render react components into the DOM , Browser render karrana React DOM oni -->
 
     <script>
+      <!-- Components kiyyane basically just a function -->
       function App() {
         // const time = new Date().toLocaleTimeString();
-        const [time, setTime] = React.useState(new Date().toLocaleTimeString());
-
+        const [time, setTime] = React.useState(new Date().toLocaleTimeString()); <!--Screen eke monawa hari update karrdi state oni-->
         React.useEffect(function () {
           setInterval(function () {
             setTime(new Date().toLocaleTimeString());
           }, 1000);
         }, []);
 
-        return React.createElement("header", null, `Hello React! It's ${time}`);
+        return React.createElement("header", null, `Hello React! It's ${time}`); <!-- Template literlas karala thiyyne Name of the HTML Element,Props,Children of the element-->
       }
 
       const root = ReactDOM.createRoot(document.getElementById("root"));
