@@ -142,3 +142,25 @@ function getBooks() {
 function getBook(id) {
   return data.find((d) => d.id === id);
 }
+
+/*--------------------Destrcucturing Lesson ------------------ */
+
+const book = getBook(2);
+
+/* const title = book.title;
+ const author = book.author; */ // without Destrcucturing
+
+// With Destrcucturing
+
+const { title, author, genres } = book; // Propert name as it is - Curley Brasis used
+
+console.log(author, title, genres);
+
+/*--------------------Destrcucturing With Array ------------------ */
+// const primaryGenre = genres[0];
+// const secondaryGenre = genres[1];   without Array Destrcucturing
+
+// With Array Destrcucturing
+const [primaryGenre, secondaryGenre] = genres; // Square Brackets are used in Array Destrcucturing
+
+console.log(primaryGenre, secondaryGenre);
