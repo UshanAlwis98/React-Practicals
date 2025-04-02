@@ -145,7 +145,7 @@ function getBook(id) {
 
 /*--------------------Destrcucturing Lesson ------------------ */
 
-const book = getBook(2);
+const book = getBook(3);
 
 /* const title = book.title;
  const author = book.author; */ // without Destrcucturing
@@ -235,3 +235,12 @@ console.log(
   book.reviews.librarything.reviewsCount ??
     "Nullish Coalishing Operator Implmented"
 ); // Dn 0 kiyyane Falsy unath adala pothe count eka 0 kiyala denawa
+
+function myfunc(book) {
+  const goodReads = book.reviews.goodreads.reviewsCount;
+  const librarything = book.reviews.librarything.reviewsCount;
+  const totalReviewCount = goodReads + librarything;
+  return totalReviewCount;
+}
+
+console.log(myfunc(book));
