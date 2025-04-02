@@ -145,7 +145,7 @@ function getBook(id) {
 
 /*--------------------Destrcucturing Lesson ------------------ */
 
-const book = getBook(1);
+const book = getBook(2);
 
 /* const title = book.title;
  const author = book.author; */ // without Destrcucturing
@@ -194,3 +194,14 @@ const summary = `${title}, a ${pages} is a book ${genres[1]}  ok  ${
   publicationDate.split("-")[0]
 }`;
 summary;
+
+const bookpage = pages > 1000 ? "over a thousand" : "less than 1000";
+console.log(`The Total Number of Pages are ${bookpage}`);
+
+// function getyear(id) {
+//   return `The date is ${publicationDate.split("-")[0]}`;
+// }
+
+const getyear = (id) => `The data is ${publicationDate.split("-")[0]}`;
+
+console.log(getyear(1));

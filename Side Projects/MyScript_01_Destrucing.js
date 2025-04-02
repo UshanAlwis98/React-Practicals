@@ -42,3 +42,16 @@ const { genres } = book[0];
 
 const newvarGenre = [...genres, "Hello"];
 console.log(newvarGenre);
+
+// ES 5 Function
+
+function es5function(x, y) {
+  return `The addition is ${x + y} `;
+}
+
+console.log(es5function(5, 6));
+
+// ES 6 Function
+
+const es6functionvar = (x, y) => `The addition in ES6 fUNCTION IS ${x + y}`;
+console.log(es6functionvar(5, 4));
