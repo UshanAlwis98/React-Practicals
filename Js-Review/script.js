@@ -203,3 +203,22 @@ console.log(`The Total Number of Pages are ${bookpage}`);
 // }
 
 // Short Circuiting and Logical Operators
+console.log(true && "Some string");
+console.log(false && "Some string");
+
+// Example for AND Logical Operator
+let k = 5;
+let z = 7;
+
+console.log(k < z && "1st Statement is correct");
+console.log(k > z && "1st Statement is false");
+
+// There are Falsy value and Truthy value
+
+// Falsy Value -  0 , '' , null ,undefined
+console.log("Ushan" && "Some");
+console.log(0 && "hi"); // Falsy value ekk awoth first statement eka ehamam denawa
+
+// Example for OR Operator
+
+console.log();
