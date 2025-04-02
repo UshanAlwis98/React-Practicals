@@ -145,12 +145,12 @@ function getBook(id) {
 
 /*--------------------Destrcucturing Lesson ------------------ */
 
-const book = getBook(2);
+const book = getBook(1);
 
 /* const title = book.title;
  const author = book.author; */ // without Destrcucturing
 
-// With Destrcucturing
+// With Object Destrcucturing
 
 const { title, author, genres } = book; // Propert name as it is - Curley Brasis used
 
@@ -160,7 +160,30 @@ console.log(author, title, genres);
 // const primaryGenre = genres[0];
 // const secondaryGenre = genres[1];   without Array Destrcucturing
 
-// With Array Destrcucturing
+// With Array Destrcucturing - Array ekakin values pick karanawa
 const [primaryGenre, secondaryGenre] = genres; // Square Brackets are used in Array Destrcucturing
 
 console.log(primaryGenre, secondaryGenre);
+
+/* Rest and Spread Operator */
+
+// Rest Operator
+const [firstGenre, ...otherGenres] = genres; // Rest Operator must be in the last in Destrcucturing Element
+console.log(primaryGenre, otherGenres);
+
+// Spread Operator
+// Spread Operator with Arrays - Add a new Array index at last(Spread Operator Antimata dannath puluwan)
+const newGenres = [...genres, "epic fantasy"];
+newGenres;
+
+// Spread Operator with Objects
+
+const updatedBook = {
+  ...book,
+  // Adding a new Property
+  moviePublicationDate: "2001-10-08",
+
+  // Overriding an existing Property
+  pages: 1210,
+};
+updatedBook;
