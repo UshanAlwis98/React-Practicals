@@ -221,4 +221,17 @@ console.log(0 && "hi"); // Falsy value ekk awoth first statement eka ehamam dena
 
 // Example for OR Operator
 
+console.log(true || "Some String"); // First value true nan 2weni ekk diha ballenth naa
+console.log(false || "My string"); // First value false nan 2weni value eka return karanawa
+
+console.log(book.translations.spanish || "Othervalue"); //adala pothata Spanish translations thiyena nisa eka return una
+console.log(book.translations.spanish || "fff"); // adala pothata spanish translations nathi unot 2weniyata thiyena eka return una
+
+console.log(book.reviews.librarything.reviewsCount || "No Data"); // Attatama me book ekata review Count eka 0k kiyala thiyenewa. Namuth 0 kiyyane falsy value hinda second statement eka thmi return wenne.
 console.log();
+
+// Nullish Coalishing Operator  ?? - Works Simalrily to the OR Operator
+console.log(
+  book.reviews.librarything.reviewsCount ??
+    "Nullish Coalishing Operator Implmented"
+); // Dn 0 kiyyane Falsy unath adala pothe count eka 0 kiyala denawa
