@@ -1,3 +1,5 @@
+// Destrucing with Objects
+
 const book = [
   {
     name: "Madol Duwa",
@@ -25,5 +27,18 @@ console.log(
     book[1].genres[0]
 );
 
-const { name, genres, author } = book;
-console.log(name);
+// Destructuring with Arrays
+
+const [name, author] = book;
+
+console.log(author, name);
+
+// Rest Operator
+
+const [primaryGenre, ...otherGenres] = book[0].genres;
+console.log(otherGenres, primaryGenre);
+
+const { genres } = book[0];
+
+const newvarGenre = [...genres, "Hello"];
+console.log(newvarGenre);

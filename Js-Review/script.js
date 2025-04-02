@@ -152,7 +152,7 @@ const book = getBook(1);
 
 // With Object Destrcucturing
 
-const { title, author, genres } = book; // Propert name as it is - Curley Brasis used
+const { title, author, genres, pages, publicationDate } = book; // Propert name as it is - Curley Brasis used
 
 console.log(author, title, genres);
 
@@ -187,3 +187,10 @@ const updatedBook = {
   pages: 1210,
 };
 updatedBook;
+
+// Template Literlas
+
+const summary = `${title}, a ${pages} is a book ${genres[1]}  ok  ${
+  publicationDate.split("-")[0]
+}`;
+summary;
