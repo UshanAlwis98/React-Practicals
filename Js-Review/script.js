@@ -202,6 +202,4 @@ console.log(`The Total Number of Pages are ${bookpage}`);
 //   return `The date is ${publicationDate.split("-")[0]}`;
 // }
 
-const getyear = (id) => `The data is ${publicationDate.split("-")[0]}`;
-
-console.log(getyear(1));
+// Short Circuiting and Logical Operators

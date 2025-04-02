@@ -53,5 +53,5 @@ console.log(es5function(5, 6));
 
 // ES 6 Function
 
-const es6functionvar = (x, y) => `The addition in ES6 fUNCTION IS ${x + y}`;
+const es6functionvar = (x, y) => x + y;
 console.log(es6functionvar(5, 4));
