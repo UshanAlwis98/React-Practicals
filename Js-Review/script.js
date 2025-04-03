@@ -145,102 +145,119 @@ function getBook(id) {
 
 /*--------------------Destrcucturing Lesson ------------------ */
 
-const book = getBook(3);
+// const book = getBook(3);
 
-/* const title = book.title;
- const author = book.author; */ // without Destrcucturing
+// /* const title = book.title;
+//  const author = book.author; */ // without Destrcucturing
 
-// With Object Destrcucturing
+// // With Object Destrcucturing
 
-const { title, author, genres, pages, publicationDate } = book; // Propert name as it is - Curley Brasis used
+// const { title, author, genres, pages, publicationDate } = book; // Propert name as it is - Curley Brasis used
 
-console.log(author, title, genres);
+// console.log(author, title, genres);
 
-/*--------------------Destrcucturing With Array ------------------ */
-// const primaryGenre = genres[0];
-// const secondaryGenre = genres[1];   without Array Destrcucturing
+// /*--------------------Destrcucturing With Array ------------------ */
+// // const primaryGenre = genres[0];
+// // const secondaryGenre = genres[1];   without Array Destrcucturing
 
-// With Array Destrcucturing - Array ekakin values pick karanawa
-const [primaryGenre, secondaryGenre] = genres; // Square Brackets are used in Array Destrcucturing
+// // With Array Destrcucturing - Array ekakin values pick karanawa
+// const [primaryGenre, secondaryGenre] = genres; // Square Brackets are used in Array Destrcucturing
 
-console.log(primaryGenre, secondaryGenre);
+// console.log(primaryGenre, secondaryGenre);
 
-/* Rest and Spread Operator */
+// /* Rest and Spread Operator */
 
-// Rest Operator
-const [firstGenre, ...otherGenres] = genres; // Rest Operator must be in the last in Destrcucturing Element
-console.log(primaryGenre, otherGenres);
+// // Rest Operator
+// const [firstGenre, ...otherGenres] = genres; // Rest Operator must be in the last in Destrcucturing Element
+// console.log(primaryGenre, otherGenres);
 
-// Spread Operator
-// Spread Operator with Arrays - Add a new Array index at last(Spread Operator Antimata dannath puluwan)
-const newGenres = [...genres, "epic fantasy"];
-newGenres;
+// // Spread Operator
+// // Spread Operator with Arrays - Add a new Array index at last(Spread Operator Antimata dannath puluwan)
+// const newGenres = [...genres, "epic fantasy"];
+// newGenres;
 
-// Spread Operator with Objects
+// // Spread Operator with Objects
 
-const updatedBook = {
-  ...book,
-  // Adding a new Property
-  moviePublicationDate: "2001-10-08",
+// const updatedBook = {
+//   ...book,
+//   // Adding a new Property
+//   moviePublicationDate: "2001-10-08",
 
-  // Overriding an existing Property
-  pages: 1210,
-};
-updatedBook;
+//   // Overriding an existing Property
+//   pages: 1210,
+// };
+// updatedBook;
 
-// Template Literlas
+// // Template Literlas
 
-const summary = `${title}, a ${pages} is a book ${genres[1]}  ok  ${
-  publicationDate.split("-")[0]
-}`;
-summary;
+// const summary = `${title}, a ${pages} is a book ${genres[1]}  ok  ${
+//   publicationDate.split("-")[0]
+// }`;
+// summary;
 
-const bookpage = pages > 1000 ? "over a thousand" : "less than 1000";
-console.log(`The Total Number of Pages are ${bookpage}`);
+// const bookpage = pages > 1000 ? "over a thousand" : "less than 1000";
+// console.log(`The Total Number of Pages are ${bookpage}`);
 
-// function getyear(id) {
-//   return `The date is ${publicationDate.split("-")[0]}`;
+// // function getyear(id) {
+// //   return `The date is ${publicationDate.split("-")[0]}`;
+// // }
+
+// // Short Circuiting and Logical Operators
+// console.log(true && "Some string");
+// console.log(false && "Some string");
+
+// // Example for AND Logical Operator
+// let k = 5;
+// let z = 7;
+
+// console.log(k < z && "1st Statement is correct");
+// console.log(k > z && "1st Statement is false");
+
+// // There are Falsy value and Truthy value
+
+// // Falsy Value -  0 , '' , null ,undefined
+// console.log("Ushan" && "Some");
+// console.log(0 && "hi"); // Falsy value ekk awoth first statement eka ehamam denawa
+
+// // Example for OR Operator
+
+// console.log(true || "Some String"); // First value true nan 2weni ekk diha ballenth naa
+// console.log(false || "My string"); // First value false nan 2weni value eka return karanawa
+
+// console.log(book.translations.spanish || "Othervalue"); //adala pothata Spanish translations thiyena nisa eka return una
+// console.log(book.translations.spanish || "fff"); // adala pothata spanish translations nathi unot 2weniyata thiyena eka return una
+
+// console.log(book.reviews.librarything.reviewsCount || "No Data"); // Attatama me book ekata review Count eka 0k kiyala thiyenewa. Namuth 0 kiyyane falsy value hinda second statement eka thmi return wenne.
+// console.log();
+
+// // Nullish Coalishing Operator  ?? - Works Simalrily to the OR Operator
+// console.log(
+//   book.reviews.librarything.reviewsCount ??
+//     "Nullish Coalishing Operator Implmented"
+// ); // Dn 0 kiyyane Falsy unath adala pothe count eka 0 kiyala denawa
+
+// function myfunc(book) {
+//   const goodReads = book.reviews.goodreads.reviewsCount;
+//   const librarything = book.reviews.librarything.reviewsCount;
+//   const totalReviewCount = goodReads + librarything;
+//   return totalReviewCount;
 // }
 
-// Short Circuiting and Logical Operators
-console.log(true && "Some string");
-console.log(false && "Some string");
+// console.log(myfunc(book));
 
-// Example for AND Logical Operator
-let k = 5;
-let z = 7;
+/*-------------------- Functional Array Methods Lesson ------------------ */
 
-console.log(k < z && "1st Statement is correct");
-console.log(k > z && "1st Statement is false");
+// Map Method
+const x = [1, 2, 3, 4, 5].map((el) => el * 2);
+console.log(x);
 
-// There are Falsy value and Truthy value
+const bookArray = getBooks();
 
-// Falsy Value -  0 , '' , null ,undefined
-console.log("Ushan" && "Some");
-console.log(0 && "hi"); // Falsy value ekk awoth first statement eka ehamam denawa
+const titles = bookArray.map((book) => book.title);
+titles;
 
-// Example for OR Operator
-
-console.log(true || "Some String"); // First value true nan 2weni ekk diha ballenth naa
-console.log(false || "My string"); // First value false nan 2weni value eka return karanawa
-
-console.log(book.translations.spanish || "Othervalue"); //adala pothata Spanish translations thiyena nisa eka return una
-console.log(book.translations.spanish || "fff"); // adala pothata spanish translations nathi unot 2weniyata thiyena eka return una
-
-console.log(book.reviews.librarything.reviewsCount || "No Data"); // Attatama me book ekata review Count eka 0k kiyala thiyenewa. Namuth 0 kiyyane falsy value hinda second statement eka thmi return wenne.
-console.log();
-
-// Nullish Coalishing Operator  ?? - Works Simalrily to the OR Operator
-console.log(
-  book.reviews.librarything.reviewsCount ??
-    "Nullish Coalishing Operator Implmented"
-); // Dn 0 kiyyane Falsy unath adala pothe count eka 0 kiyala denawa
-
-function myfunc(book) {
-  const goodReads = book.reviews.goodreads.reviewsCount;
-  const librarything = book.reviews.librarything.reviewsCount;
-  const totalReviewCount = goodReads + librarything;
-  return totalReviewCount;
-}
-
-console.log(myfunc(book));
+const essentials = bookArray.map(
+  (title_n_author) =>
+    title_n_author.title + "is belong to" + title_n_author.author
+);
+essentials;
