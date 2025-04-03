@@ -261,3 +261,9 @@ const essentials = bookArray.map(
     title_n_author.title + "is belong to" + title_n_author.author
 );
 essentials;
+
+const mathArray = [4, 9, 16, 25, 36];
+console.log(mathArray.map(Math.sqrt));
+
+const filterArray = bookArray.filter((book) => book.pages > 300);
+console.log(filterArray);

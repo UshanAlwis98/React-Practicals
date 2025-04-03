@@ -5,6 +5,7 @@ const Tvseries = [
     Company: "Warner Brothers",
     publicationDate: "2025-01-01",
     Genres: ["Adventure", "Novel", "Fantasy", "Black Comedy"],
+    pagesCount: 445,
   },
 
   {
@@ -12,6 +13,7 @@ const Tvseries = [
     Title: "Prison Break",
     Company: "EA Sports",
     publicationDate: "2026-02-01",
+    pagesCount: 155,
     Genres: ["Fantasy", "Novel", "Adventure", "Black Comedy"],
     Reviews: {
       goodReads: {
@@ -32,6 +34,7 @@ const Tvseries = [
     id: 3,
     Title: "Halloween",
     publicationDate: "2027-03-01",
+    pagesCount: 375,
     Reviews: {
       goodReads: {
         rating: 1.5,
