@@ -287,7 +287,7 @@ const arr = [6, 3, 9, 7, 1];
 console.log(arr.sort((a, b) => a - b));
 console.log(arr); // At last Arr array is organized as Acsending Order
 
-// Pages Wadima eke sita aduma eka dakwa order karrana puluwan
+// Pages Wadima eke sita aduma eka dakwa order karrana puluwan - Slice karanawa kiyyane copyyak gannawa wage
 const sortedbypagebook = bookArray
   .slice()
   .sort((h, j) => j.pages - h.pages)
