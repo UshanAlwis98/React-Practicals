@@ -277,7 +277,19 @@ const adventureBooks = bookArray
 console.log(adventureBooks);
 
 const pagesAllBooks = bookArray.reduce(
-  (acc, CurrentBookPageValue) => acc + CurrentBookPageValue.pages,
+  (sum, CurrentBookPageValue) => sum + CurrentBookPageValue.pages,
   0
 );
 console.log(pagesAllBooks);
+
+// Sorted Array
+const arr = [6, 3, 9, 7, 1];
+console.log(arr.sort((a, b) => a - b));
+console.log(arr); // At last Arr array is organized as Acsending Order
+
+// Pages Wadima eke sita aduma eka dakwa order karrana puluwan
+const sortedbypagebook = bookArray
+  .slice()
+  .sort((h, j) => j.pages - h.pages)
+  .map((yyy) => yyy.title);
+console.log(sortedbypagebook);
