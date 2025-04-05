@@ -265,5 +265,19 @@ essentials;
 const mathArray = [4, 9, 16, 25, 36];
 console.log(mathArray.map(Math.sqrt));
 
-const filterArray = bookArray.filter((book) => book.pages > 300);
-console.log(filterArray);
+const longBookswithMovie = bookArray
+  .filter((book) => book.pages > 500)
+  .filter((book) => book.hasMovieAdaptation);
+console.log(longBookswithMovie);
+
+const adventureBooks = bookArray
+  .filter((klko) => klko.genres.includes("adventure"))
+  .map((gobo) => gobo.title);
+
+console.log(adventureBooks);
+
+const pagesAllBooks = bookArray.reduce(
+  (acc, CurrentBookPageValue) => acc + CurrentBookPageValue.pages,
+  0
+);
+console.log(pagesAllBooks);
