@@ -59,3 +59,8 @@ const filterArray = data
   .filter((x) => x.publicationDate.split("-")[0] > 1980)
   .map((y) => y.title);
 console.log(filterArray);
+
+const monthValue = data.map(
+  publicationDate[4].split("-")[1].reduce((k, g) => k + g, 0)
+);
+console.log(monthValue);
