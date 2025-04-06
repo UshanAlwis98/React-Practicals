@@ -293,3 +293,26 @@ const sortedbypagebook = bookArray
   .sort((h, j) => j.pages - h.pages)
   .map((yyy) => yyy.title);
 console.log(sortedbypagebook);
+
+// 1) Add a book Object to Array
+
+const newBook = {
+  id: 6,
+  title: "Sherlock Homes",
+  author: "Arthur Conan Doyle",
+};
+
+const booksAfterAdd = [...bookArray, newBook]; // Used Spread Operator here
+console.log(booksAfterAdd);
+
+// 2) Delete a book Object from Array
+
+const booksAfterDelete = booksAfterAdd.filter((u) => u.id !== 3);
+console.log(booksAfterDelete);
+
+// 3) Update the book Object in Array
+
+const booksAfterUpdate = booksAfterDelete.map((d) =>
+  d.id === 2 ? { ...d, pages: 100 } : d
+);
+console.log(booksAfterUpdate);
