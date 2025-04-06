@@ -248,71 +248,12 @@ function getBook(id) {
 /*-------------------- Functional Array Methods Lesson ------------------ */
 
 // Map Method
-const x = [1, 2, 3, 4, 5].map((el) => el * 2);
-console.log(x);
+//
 
-const bookArray = getBooks();
+/*--------------------Asynchronous JavaScript and Promises Lesson ------------------ */
 
-const titles = bookArray.map((book) => book.title);
-titles;
+fetch("https://jsonplaceholder.typicode.com/todos")
+  .then((res) => res.json())
+  .then((data) => console.log(data));
 
-const essentials = bookArray.map(
-  (title_n_author) =>
-    title_n_author.title + "is belong to" + title_n_author.author
-);
-essentials;
-
-const mathArray = [4, 9, 16, 25, 36];
-console.log(mathArray.map(Math.sqrt));
-
-const longBookswithMovie = bookArray
-  .filter((book) => book.pages > 500)
-  .filter((book) => book.hasMovieAdaptation);
-console.log(longBookswithMovie);
-
-const adventureBooks = bookArray
-  .filter((klko) => klko.genres.includes("adventure"))
-  .map((gobo) => gobo.title);
-
-console.log(adventureBooks);
-
-const pagesAllBooks = bookArray.reduce(
-  (sum, CurrentBookPageValue) => sum + CurrentBookPageValue.pages,
-  0
-);
-console.log(pagesAllBooks);
-
-// Sorted Array
-const arr = [6, 3, 9, 7, 1];
-console.log(arr.sort((a, b) => a - b));
-console.log(arr); // At last Arr array is organized as Acsending Order
-
-// Pages Wadima eke sita aduma eka dakwa order karrana puluwan - Slice karanawa kiyyane copyyak gannawa wage
-const sortedbypagebook = bookArray
-  .slice()
-  .sort((h, j) => j.pages - h.pages)
-  .map((yyy) => yyy.title);
-console.log(sortedbypagebook);
-
-// 1) Add a book Object to Array
-
-const newBook = {
-  id: 6,
-  title: "Sherlock Homes",
-  author: "Arthur Conan Doyle",
-};
-
-const booksAfterAdd = [...bookArray, newBook]; // Used Spread Operator here
-console.log(booksAfterAdd);
-
-// 2) Delete a book Object from Array
-
-const booksAfterDelete = booksAfterAdd.filter((u) => u.id !== 3);
-console.log(booksAfterDelete);
-
-// 3) Update the book Object in Array
-
-const booksAfterUpdate = booksAfterDelete.map((d) =>
-  d.id === 2 ? { ...d, pages: 100 } : d
-);
-console.log(booksAfterUpdate);
+console.log("Ushan");
