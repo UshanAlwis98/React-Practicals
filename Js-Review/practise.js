@@ -59,3 +59,25 @@ const filterArray = data
   .filter((x) => x.publicationDate.split("-")[0] > 1980)
   .map((y) => y.title);
 console.log(filterArray);
+
+// ---------------------------------------Add New Book to Object-------------------------------------------
+
+const newBook = {
+  id: 7,
+  title: "Sniper",
+  publicationDate: "2025",
+  author: "Ushan Loshitha",
+};
+
+const bookAfterAdd = [...data, newBook];
+console.log(bookAfterAdd);
+
+const bookAfterDelete = data.filter((deletedBook) => deletedBook.id !== 7);
+console.log(bookAfterDelete);
+
+const bookAfterUpdate = data.map((myUpdatedBook) =>
+  myUpdatedBook.title === "Rambo"
+    ? { ...data, title: "Sniper" }
+    : "Book Not Updated"
+);
+console.log(bookAfterUpdate);
