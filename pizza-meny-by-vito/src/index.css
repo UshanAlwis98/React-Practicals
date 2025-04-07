@@ -14,8 +14,8 @@ body {
   font-family: "Roboto Mono", sans-serif;
   color: #252525;
   font-weight: 400;
-  background-color: #f7f2e9;
-  border-bottom: 1.6rem solid #edc84b;
+  background-color: #dbcf5b;
+  border-bottom: 1.6rem solid #e71b14;
   min-height: 100vh;
   padding: 3.2rem;
   padding-bottom: 6rem;
@@ -39,13 +39,13 @@ body {
 
 .header h1 {
   /* Non-accessible color */
-  color: #edc84b;
+  color: #e91111;
   /* color: #af8602; */
 
   text-transform: uppercase;
   text-align: center;
   font-size: 5.2rem;
-  font-weight: 300;
+  font-weight: bold;
   letter-spacing: 3px;
   position: relative;
   width: 100%;
@@ -58,7 +58,7 @@ body {
   content: "";
   height: 3px;
   width: 4rem;
-  background-color: #edc84b;
+  background-color: #eb3414;
   position: absolute;
   top: calc(50% - 1px);
 }
@@ -88,7 +88,7 @@ body {
   font-size: 2.4rem;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .menu > p {
@@ -125,7 +125,7 @@ body {
 
 .pizza h3 {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .pizza p {
